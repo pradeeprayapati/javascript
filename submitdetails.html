@@ -1,0 +1,51 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>data</title>
+</head>
+<body>
+<h1>Details</h1>
+<form id="myform">
+<fieldset>
+name:<input type="text" id="fname" placeholder="name" required><br>
+Phn.no:<input type="Number" id="phno" placeholder="phone number" required><br>
+</fieldset>
+<fieldset>
+<label>Choice of couse:</label>
+<input type="radio" id="BE" name="course" value="Bachelors">
+<label for="BE">Bachelors</label><br>
+<input type="radio" id="MA" name="course" value="masters">
+<label for="MA">Masters</label><br>
+</fieldset>
+<fieldset>
+<label for="des">Description:</label>
+<textarea id="des" name="name" rows="10" cols="30"></textarea><br>
+</fieldset>
+<fieldset>
+<label>Subject insterests:</label>
+  <input type="checkbox" id="python" name="name" value="Python" checked="true">
+  <label for="python">Python</label><br>
+  <input type="checkbox" id="java" name="name" value="Java">
+  <label for="java">Java</label><br>
+  <input type="checkbox" id="C" name="name" value="C">
+  <label for="C">C</label>
+</fieldset>
+<button onclick="myfunc()">submit</button>
+</form>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+function  myfunc(){
+var x1 = document.getElementById("fname").value;
+var x2 = document.getElementById("phno").value;
+//document.getElementById("demo").innerHTML=x1
+//document.getElementById("demo1").innerHTML=x2;
+alert("Name:"+x1");
+alert("phno:"+x2);
+}
+
+</script>
+
+</body>
+</html>

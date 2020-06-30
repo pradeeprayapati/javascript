@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>tables</title>
+</head>
+<body>
+<table id="table">
+<caption align="top">
+<b>subject Grades</b>
+</caption>
+<th bgcolor='grey'>sub-Name</th>
+<th bgcolor='grey'>Grade</th>
+<tr>
+<td>CN</td>
+<td>65</td>
+</tr>
+<tr bgcolor='grey'>
+<td>WT</td>
+<td>75</td>
+</tr>
+<tr>
+<td>FLAT</td>
+<td>75</td>
+</tr>
+<tr bgcolor='grey'>
+<td>DBMS</td>
+<td>80</td>
+</tr>
+<tr>
+<td>CS</td>
+<td>79</td>
+</tr>
+<tr bgcolor='grey'>
+<td>JAVA</td>
+<td>85</td>
+</tr>
+</table>
+<b>Average : <span id="demo"></span></b>
+<script>
+var table = document.getElementById("table"),sum=0,avg,c=table.rows.length;
+function average(table,c){
+for(var i=1;i<table.rows.length;i++)
+{
+sum = sum+parseInt(table.rows[i].cells[1].innerHTML);
+}
+return sum/c;
+}
+document.getElementById("demo").innerHTML = average(table,c);
+</script>
+</body>
+</html>

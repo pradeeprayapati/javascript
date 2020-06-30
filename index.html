@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1 id="name">123JavaScript456</h1>
+<!--<button>Change user</button>-->
+<p id="demo"></p> 
+<p id="demo1"></p> 
+<p id="demo2"></p> 
+<script>
+var array = [1,2,3,4,5];
+document.getElementById("demo").innerHTML = "<b>arrays : </b>"+array[3];
+var pat=/[a-z]/gi;
+var name="123JavaScript456";
+var res=name.match(pat);
+var a= Math.random();
+document.getElementById("demo1").innerHTML="<b>regexp : </b>"+res;
+document.getElementById("demo2").innerHTML =
+"<p><b>power(2,8):</b> " + Math.pow(2,8) + "</p>" +
+"<p><b>sqrt(25):</b> " + Math.sqrt(25) + "</p>" +
+"<p><b>absolute:</b> " + Math.abs(-12) + "</p>"+
+"<p><b>random:</b> " + Math.random() + "</p>" +
+"<p><b>ceil(a):</b> " + Math.ceil(a) + "</p>" +
+"<p><b>floor(a):</b> " + Math.floor(a) + "</p>" +
+"<p><b>round(a):</b> " + Math.round(a) + "</p>" +
+"<p><b>sin(90):</b> " + Math.sin(90*Math.PI/180) + "</p>";
+</script>
+</body>
+</html>
