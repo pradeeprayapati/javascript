@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 10 and 100:</p>
+
+<input id="demo" type="text" min="10" max="100" required>
+<button type="button" onclick="myFunction()">fibonacci-series</button>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 10)  throw "too low";
+    if(x > 100)   throw "too high";
+	if(x>= 10 && x<=100){
+        var a,b,res;
+        a=0;
+        b=1;
+        res=a;
+        for(var i=1;i<x;i++){
+            document.write(res+"<br>");
+            res =a+b;
+            a=b;
+            b=res;
+        }
+    }
+    else{
+        alert("input b/w 10 and 100");
+        }
+
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+

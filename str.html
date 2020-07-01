@@ -1,0 +1,15 @@
+<html>
+<body>
+<p id="demo">HTML,stands,for,hyper,text,markup,language,it,used,for,websites,development</p><br>
+<b>to find the 5th,7th,10th words from the above press the button below</b><br>
+<button type="button" onclick="myfun()">click</button><br>
+<p id="p1"></p>
+<script>
+function myfun(){
+var str=document.getElementById("demo").innerHTML;
+var arr=str.split(",");
+document.getElementById("p1").innerHTML = arr[5]+"<br>"+arr[7]+"<br>"+arr[10];
+}
+</script>
+<body>
+<html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<button onclick="fib()">get-fib-series</button>
+<p id="demo"></p>
+<script>
+
+function fib(){
+var x=prompt("enter the num:");
+if(x>= 10 && x<=100){
+var a,b,res;
+a=0;
+b=1;
+res=a;
+for(var i=1;i<x;i++){
+document.write(res+"<br>");
+res =a+b;
+a=b;
+b=res;
+}
+}
+else{
+alert("input b/w 10 and 100");
+}
+}
+</script>
+</body>
+</html>

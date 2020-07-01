@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<p onload="alert("WELCOME")"></p>
+<h1 onmouseover="fun(this)">Todays date is:</h1>
+<p id="demo"></p>
+<button onclick="myfun()">show date-time</button>
+<script>
+function fun(id){
+alert("click below");
+}
+function myfun(){
+document.getElementById("demo").innerHTML=Date();
+}
+</script>
+</body>
+</html>
