@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <style>
+  div {
+    background:green;
+    width: 30px;
+    height: 40px;
+    margin: 2px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body bgcolor="black">
+ <p style="color:red">click on them to make them go away.</p>
+<div></div>
+ 
+<script>
+for ( var i = 0; i < 5; i++ ) {
+  $( "<div>" ).appendTo( document.body );
+}
+$( "div" ).click(function() {
+  $( this ).hide( 2000, function() {
+    $( this ).remove();
+  });
+});
+</script>
+ 
+</body>
+</html>
