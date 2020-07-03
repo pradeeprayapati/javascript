@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+<title>jQuery delay Function</title>
+<style>
+div {
+position: absolute;
+width: 70px;
+height: 70px;
+float: left;
+}
+.div1{
+background-color: red;
+left: 0;
+}
+.div2{
+background-color: black;
+left: 80px;
+}
+</style>
+<script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<p><button>jQuery Delay Demo</button></p>
+<div class="div1"></div>
+<div class="div2"></div>
+<script>
+$( "button" ).click(function() {
+$( "div.div1" ).toggle( 300 ).delay( 2000 ).fadeIn( 400 );
+$( "div.div2" ).toggle( 300 ).slideDown( 1000 );
+});
+</script>
+</body>
+</html>

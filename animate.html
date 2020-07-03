@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> JQuery Animation</title>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");
+    runAnimation();
+    function runAnimation(){
+      div.animate({height:300},"fast");
+      div.animate({width:300},"fast");
+      div.css("background-color","green");  
+      div.animate({height:100},"slow");
+      div.animate({width:100},"slow",runAnimation);
+    }
+function callBackAnimation(){
+      alert("Animation completed");
+    }
+
+  });
+  $("#stop").click(function (){
+  $("div").stop(true,false)
+  });
+});
+</script>
+</head>
+<body bgcolor="black">
+  
+<button>Run</button>
+<div style="width:70px;height:70px;position:absolute;left:20px;top:50px;background-color:blue;"></div>
+<button id="stop">stop</button>
+</body>
+</html>
